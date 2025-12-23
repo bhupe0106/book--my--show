@@ -81,7 +81,7 @@ def home_page():
                     
                     if st.button("Book Tickets", key=f"btn_{movie.movie_id}"):
                         st.session_state.selected_movie = movie
-                        st.switch_page("pages/01_book_tickets.py")
+                        st.switch_page("pages/book_tickets.py")
     else:
         st.info("No movies available at the moment")
 
@@ -106,7 +106,7 @@ def login_page():
                 if user:
                     st.session_state.current_user = user
                     st.success(f"Welcome back, {user.name}!")
-                    st.switch_page("pages/02_my_bookings.py")
+                    st.switch_page("pages/my_bookings.py")
                 else:
                     st.error("Invalid email or password")
             else:
@@ -129,7 +129,7 @@ def login_page():
                     st.session_state.current_user = user
                     st.success(f"Account created successfully! Welcome, {user.name}!")
                     st.info("Redirecting to bookings page...")
-                    st.switch_page("pages/02_my_bookings.py")
+                    st.switch_page("pages/my_bookings.py")
             else:
                 st.warning("Please fill in all fields")
 
@@ -163,15 +163,15 @@ def main():
             )
             
             if page == "Home":
-                st.switch_page("pages/00_home.py")
+                st.switch_page("pages/home.py")
             elif page == "Book Tickets":
-                st.switch_page("pages/01_book_tickets.py")
+                st.switch_page("pages/book_tickets.py")
             elif page == "My Bookings":
-                st.switch_page("pages/02_my_bookings.py")
+                st.switch_page("pages/my_bookings.py")
             elif page == "Logout":
                 st.session_state.current_user = None
                 st.success("Logged out successfully!")
-                st.switch_page("pages/00_home.py")
+                st.switch_page("pages/home.py")
         else:
             page = st.radio(
                 "Navigation",
@@ -180,9 +180,9 @@ def main():
             )
             
             if page == "Home":
-                st.switch_page("pages/00_home.py")
+                st.switch_page("pages/home.py")
             elif page == "Login/Register":
-                st.switch_page("pages/03_login.py")
+                st.switch_page("pages/login.py")
         
         st.divider()
         st.markdown("### About")

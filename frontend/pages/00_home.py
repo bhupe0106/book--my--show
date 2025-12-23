@@ -77,7 +77,7 @@ if movies:
                 
                 if st.button("Book Now", key=f"book_{movie.movie_id}", use_container_width=True):
                     st.session_state.selected_movie = movie
-                    st.switch_page("pages/01_book_tickets.py")
+                    st.switch_page("pages/book_tickets.py")
 else:
     st.info("No movies found matching your search")
 

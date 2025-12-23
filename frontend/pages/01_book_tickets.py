@@ -34,7 +34,7 @@ st.title("🎟️ Book Tickets")
 if not st.session_state.current_user:
     st.warning("⚠️ Please login to book tickets")
     if st.button("Go to Login"):
-        st.switch_page("pages/03_login.py")
+        st.switch_page("pages/login.py")
     st.stop()
 
 # Step 1: Select Movie
@@ -189,7 +189,7 @@ if selected_seat_ids:
                     st.success("✅ Booking confirmed! Redirecting to my bookings...")
                     st.balloons()
                     st.session_state.selected_seats = []
-                    st.switch_page("pages/02_my_bookings.py")
+                    st.switch_page("pages/my_bookings.py")
                 else:
                     st.error("❌ Payment failed. Please try again.")
             else:

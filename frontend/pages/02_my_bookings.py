@@ -37,7 +37,7 @@ st.title("🎫 My Bookings")
 if not st.session_state.current_user:
     st.warning("⚠️ Please login to view your bookings")
     if st.button("Go to Login"):
-        st.switch_page("pages/03_login.py")
+        st.switch_page("pages/login.py")
     st.stop()
 
 user = st.session_state.current_user
@@ -131,10 +131,10 @@ else:
     col1, col2 = st.columns(2)
     with col1:
         if st.button("Browse Movies", use_container_width=True):
-            st.switch_page("pages/00_home.py")
+            st.switch_page("pages/home.py")
     with col2:
         if st.button("Book Tickets", use_container_width=True):
-            st.switch_page("pages/01_book_tickets.py")
+            st.switch_page("pages/book_tickets.py")
 
 st.divider()
 

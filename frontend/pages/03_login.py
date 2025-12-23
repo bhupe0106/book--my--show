@@ -39,7 +39,7 @@ with tab1:
             if user:
                 st.session_state.current_user = user
                 st.success(f"✅ Welcome back, {user.name}!")
-                st.switch_page("pages/02_my_bookings.py")
+                st.switch_page("pages/my_bookings.py")
             else:
                 st.error("❌ Invalid email or password")
         else:
@@ -73,7 +73,7 @@ with tab2:
                 st.session_state.current_user = user
                 st.success(f"✅ Account created successfully!")
                 st.info(f"Welcome {user.name}! Redirecting to bookings page...")
-                st.switch_page("pages/02_my_bookings.py")
+                st.switch_page("pages/my_bookings.py")
         else:
             st.warning("⚠️ Please fill in all fields")
 
