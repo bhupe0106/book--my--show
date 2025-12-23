@@ -1,0 +1,3 @@
+"""
+BookMyShow Frontend Package
+"""
